@@ -37,7 +37,6 @@ RUN echo "upload_max_filesize=20M" > /usr/local/etc/php/conf.d/uploads.ini \
     && echo "post_max_size=20M" >> /usr/local/etc/php/conf.d/uploads.ini
 
 CMD php artisan config:clear && \
-    php artisan cache:clear && \
     php artisan route:clear && \
     php artisan view:clear && \
     php artisan migrate --force && \
